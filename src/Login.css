@@ -1,0 +1,21 @@
+/* // This displays the logo with grid and centers it  */
+.login {
+    display: grid;
+    place-items: center;
+    background-color: black;
+    height: 100vh;
+}
+/* css for the img in login the width of 100% allows it to be responsive */
+.login > img {
+    width: 100%;
+    
+}
+/* this is the css for the a tag in the login button*/
+.login > a {
+    padding: 20px;
+    border-radius: 99px;
+    background-color: #f5f5f5;
+    font-weight: 800;
+    color:black;
+    text-decoration: none;
+}
