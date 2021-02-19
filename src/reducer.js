@@ -1,10 +1,15 @@
-import { findAllByDisplayValue } from "@testing-library/react";
+
 
 export const initialState = {
     user: null,
     playlists: [],
     playing: false,
-    item: null
+    item: null,
+
+    
+    // Good habit, have a Default value
+    //REMOVE after finished developing helps debugging
+    token: "BQDvddwavCq-XhbBJfXrXZ72M1qFxhLJBWns6pKapp3AMIe9isJ0EAfwTSvjBxdY3LXZUq1i2Sodv80qg7GtXZoGBlNTBP5O6wx7VcRjBMGOJuVQJaCQeBh7RxRUoZ-wfrOnHlVZZJlQKJ1mjfjj_DDLnK0UShtOIRAOo4qME9cehC8NxKFo",
 };
 
 // State- How it currently looks
@@ -18,14 +23,31 @@ const reducer = (state, action) => {
     console.log(action);
 
     switch (action.type) {
-        case "SET_USER":
+        case 'SET_USER':
           return {
             ...state,
             user: action.user,
           };
+
+          case "SET_TOKEN":
+          return {
+            ...state,
+            // pushes it into the state
+            token: action.token,
+          };
+
+          case "SET_PLAYLISTS":
+            return {
+              ...state,
+              playlists: action.playlists,
+            };
+
+
+
+          // nothing changes , doesn't break app
           default:
             return state;
     }
-}
+};
 
 export default reducer;

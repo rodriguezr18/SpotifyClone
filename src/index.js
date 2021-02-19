@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './Assets/index.css';
 import App from './App';
 import { DataLayer } from "./DataLayer";
 // Because we have done it as a default export we can insert reducer below

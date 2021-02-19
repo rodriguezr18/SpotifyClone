@@ -1,0 +1,9 @@
+.body {
+    padding: 30px;
+    
+    /* perfect responsive design - constantly adjust and change size based on what the values are  */
+    flex: 0.8;
+    height: 100vh;
+    color: #040404;
+    background: linear-gradient(#faf3dc, rgba(255, 255, 255, .5));
+}

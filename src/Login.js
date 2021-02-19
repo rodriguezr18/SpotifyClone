@@ -1,5 +1,5 @@
 import React from 'react'
-import './Login.css'
+import './Assets/Login.css'
 import { loginUrl } from './spotify'
 // rfce is a es7 handy snippet that rides a functional component fully
 function Login() {

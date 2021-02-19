@@ -1,9 +1,22 @@
-import React from 'react'
+import React from "react"
+import "./Assets/Player.css";
+import Sidebar from "./Sidebar";
+import Body from "./Body";
+import Footer from "./Footer";
 
 function Player() {
     return (
-        <div>
-            <h1>Welcome to Spotify</h1>
+        // BEM - BLOCK ELEMENT MODIFIER
+        <div className="">
+            <div className="player__body">
+            <Sidebar />
+            <Body />
+
+            </div>
+
+            
+
+            <Footer />
         </div>
     )
 }
