@@ -14,6 +14,7 @@ function Sidebar() {
         <div className="sidebar">
             <img className="sidebar__logo" src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify logo" />
 
+            
             <SidebarOption Icon={HomeIcon} title="Home" />
             <SidebarOption Icon={SearchIcon} title="Search" />
             <SidebarOption Icon={LibraryMusicIcon} title="Your Library" />
@@ -22,12 +23,9 @@ function Sidebar() {
             <strong className="sidebar__title">PLAYLISTS</strong>
             
             <hr />
-
-           
-                <SidebarOption title="Rap" />
-                <SidebarOption title="RnB" />
-                <SidebarOption title="Rock" />
-            
+                {playlists?.items?.map((playlists) => (
+                    <SidebarOption title={playlists.name} />
+                ))}   
         </div>
 
     );

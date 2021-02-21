@@ -4,13 +4,13 @@ import Sidebar from "./Sidebar";
 import Body from "./Body";
 import Footer from "./Footer";
 
-function Player() {
+function Player({ spotify }) {
     return (
         // BEM - BLOCK ELEMENT MODIFIER
         <div className="">
             <div className="player__body">
             <Sidebar />
-            <Body />
+            <Body spotify={spotify} />
 
             </div>
 
@@ -21,4 +21,4 @@ function Player() {
     )
 }
 
-export default Player
+export default Player;

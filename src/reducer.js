@@ -9,10 +9,10 @@ export const initialState = {
     
     // Good habit, have a Default value
     //REMOVE after finished developing helps debugging
-    token: "BQDvddwavCq-XhbBJfXrXZ72M1qFxhLJBWns6pKapp3AMIe9isJ0EAfwTSvjBxdY3LXZUq1i2Sodv80qg7GtXZoGBlNTBP5O6wx7VcRjBMGOJuVQJaCQeBh7RxRUoZ-wfrOnHlVZZJlQKJ1mjfjj_DDLnK0UShtOIRAOo4qME9cehC8NxKFo",
+    // token: "BQDvddwavCq-XhbBJfXrXZ72M1qFxhLJBWns6pKapp3AMIe9isJ0EAfwTSvjBxdY3LXZUq1i2Sodv80qg7GtXZoGBlNTBP5O6wx7VcRjBMGOJuVQJaCQeBh7RxRUoZ-wfrOnHlVZZJlQKJ1mjfjj_DDLnK0UShtOIRAOo4qME9cehC8NxKFo",
 };
 
-// State- How it currently looks
+// State- How it currently looks 
 // Action - how we manipulate what the data there looks like
 const reducer = (state, action) => {
 
@@ -41,6 +41,12 @@ const reducer = (state, action) => {
               ...state,
               playlists: action.playlists,
             };
+
+            case "SET_DISCOVER_WEEKLY":
+              return {
+                ...state,
+                discover_weekly: action.discover_weekly,
+              }
 
 
 

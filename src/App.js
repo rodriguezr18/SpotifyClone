@@ -32,8 +32,8 @@ function App() {
     if (_token) {
       dispatch({
         type: "SET_TOKEN",
-        token:_token,
-      })
+        token: _token,
+      });
       
 
       
@@ -46,7 +46,7 @@ function App() {
         // After we pull it from the DataLayer and read it
         // How you set your actions: All capital with underscores for spaces
         dispatch({
-          type: 'SET_USER',
+          type: "SET_USER",
           user: user,
         });
       });
@@ -57,6 +57,15 @@ function App() {
           playlists: playlists,
         });
       });
+
+      spotify.getPlaylist('37i9dQZEVXcGEL0ccnvM8Y').then(response => {
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })
+      }
+
+      );
     }
 
     
@@ -67,14 +76,13 @@ function App() {
 
   return (
     <div className="app">
-      {
-        // if there is a token it will render the player for the user and if there isn't it will take the user back to the login page
-        token ? 
-        // passing spotify object through player as a prop
-        <Player spotify={spotify} />
-         : <Login />
+      
+         {/* if there is a token it will render the player for the user and if there isn't it will take the user back to the login page */}
+        {token ?  <Player spotify={spotify} /> : <Login /> }
         
-      }
+      
+        {/*  passing spotify object through player as a prop */}
+       
     </div>
   );
 }

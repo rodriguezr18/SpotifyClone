@@ -38,7 +38,7 @@ export const getTokenFromUrl = () => {
   // Pulling Access Token
   .reduce((initial, item) => {
     // #accessToken=mysupersecretkey&name=rudy
-      let parts = item.split('=')
+      let parts = item.split('=');
       initial[parts[0]] = decodeURIComponent(parts[1])
 
       return initial;
@@ -57,5 +57,5 @@ export const getTokenFromUrl = () => {
 // scopes.join allows us to go through our scopes and join it with what we would give join
 // &response_type=token - once the user is authenticated we will receive a token 
 //show_dialog=true - prompt that pops up for the user
-export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`;
 
